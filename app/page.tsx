@@ -1,7 +1,75 @@
 export default function Home() {
   return (
-    <main>
-      <h1>ポートフォリオ工事中</h1>
+    <main className="min-h-screen bg-white text-gray-900">
+
+      {/* Hero */}
+      <section className="flex flex-col items-center justify-center min-h-screen text-center px-6">
+        <p className="text-sm tracking-widest text-gray-400 mb-4">WEB CREATOR</p>
+        <h1 className="text-4xl md:text-6xl font-bold mb-6">AIで作る、本物のWeb</h1>
+        <p className="text-lg text-gray-500 mb-8">とっちゃん｜AI×Web制作フリーランス</p>
+        <a href="#works" className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition">実績を見る</a>
+      </section>
+
+      {/* About */}
+      <section className="max-w-2xl mx-auto px-6 py-24">
+        <h2 className="text-2xl font-bold mb-6">About</h2>
+        <p className="text-gray-600 leading-relaxed">
+          ボート全国3位・新聞奨学生・土木工学科出身の少年野球コーチ。<br />
+          異色すぎる経歴を持つWeb制作者が、Claude Code・Cursor・Vercelで爆速サイトを仕上げます。
+        </p>
+      </section>
+
+      {/* Works */}
+      <section id="works" className="max-w-4xl mx-auto px-6 py-24">
+        <h2 className="text-2xl font-bold mb-10">Works</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {[
+            { title: "Bloom Beauty", desc: "女性専用美容サロンサイト", url: "https://bloom-beauty-zeta.vercel.app" },
+            { title: "田中税理士事務所", desc: "税理士事務所コーポレートサイト", url: "https://zeirishi-two.vercel.app" },
+            { title: "炎牛", desc: "焼肉店のコーポレートサイト", url: "https://yakiniku-five.vercel.app" },
+            { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "https://shogi-tawny.vercel.app" },
+            { title: "地域の少年野球チーム", desc: "少年野球チームの選手募集サイト", url: "https://mets-baseball.vercel.app" },
+          ].map((work) => (
+            <a key={work.title} href={work.url} target="_blank" rel="noopener noreferrer"
+              className="border border-gray-200 rounded-2xl p-6 hover:shadow-md transition">
+              <h3 className="font-bold text-lg mb-2">{work.title}</h3>
+              <p className="text-gray-500 text-sm">{work.desc}</p>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section className="max-w-2xl mx-auto px-6 py-24">
+        <h2 className="text-2xl font-bold mb-6">Skills</h2>
+        <div className="flex flex-wrap gap-3">
+          {["Next.js", "Cursor", "Vercel", "GitHub", "Supabase", "Anthropic", "Claude Code"].map((skill) => (
+            <span key={skill} className="border border-gray-300 rounded-full px-4 py-1 text-sm text-gray-600">{skill}</span>
+          ))}
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="max-w-2xl mx-auto px-6 py-24 text-center">
+        <h2 className="text-2xl font-bold mb-6">Contact</h2>
+        <p className="text-gray-500 mb-8">お仕事のご依頼・ご相談はランサーズからお気軽にどうぞ。</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="https://www.lancers.jp" target="_blank" rel="noopener noreferrer"
+            className="border border-gray-900 px-8 py-3 rounded-full hover:bg-gray-900 hover:text-white transition">
+            ランサーズで依頼する
+          </a>
+        </div>
+        <div className="border-t border-gray-100 pt-12">
+          <p className="text-sm text-gray-400 mb-2">BLOG</p>
+          <h3 className="text-lg font-bold mb-3">息子と野球、そしてWeb制作</h3>
+          <p className="text-gray-500 text-sm mb-6">少年野球コーチとしての日々や、AI×Web制作への挑戦をnoteで綴っています。</p>
+          <a href="https://note.com/magic_pony7222" target="_blank" rel="noopener noreferrer"
+            className="border border-gray-400 px-8 py-3 rounded-full text-gray-600 hover:bg-gray-100 transition">
+            noteを読む
+          </a>
+        </div>
+      </section>
+
     </main>
   );
 }
