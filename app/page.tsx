@@ -24,12 +24,12 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-10">Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
-            { title: "田中税理士事務所", desc: "税理士事務所コーポレートサイト", url: "https://zeirishi-two.vercel.app" },
-            { title: "炎牛", desc: "焼肉店のコーポレートサイト", url: "https://yakiniku-five.vercel.app" },
-            { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "https://shogi-tawny.vercel.app" },
-            { title: "地域の少年野球チーム", desc: "少年野球チームの選手募集サイト", url: "https://mets-baseball.vercel.app" },
+            { title: "田中税理士事務所", desc: "税理士事務所コーポレートサイト", url: "/works/zeirishi" },
+            { title: "炎牛", desc: "焼肉店のコーポレートサイト", url: "/works/yakiniku" },
+            { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "/works/shogi" },
+            { title: "地域の少年野球チーム", desc: "少年野球チームの選手募集サイト", url: "/works/mets" },
           ].map((work) => (
-            <a key={work.title} href={work.url} target="_blank" rel="noopener noreferrer"
+            <a key={work.title} href={work.url}
               className="border border-gray-200 rounded-2xl p-6 hover:shadow-md transition">
               <h3 className="font-bold text-lg mb-2">{work.title}</h3>
               <p className="text-gray-500 text-sm">{work.desc}</p>
@@ -42,7 +42,7 @@ export default function Home() {
       <section className="max-w-2xl mx-auto px-6 py-24">
         <h2 className="text-2xl font-bold mb-6">Skills</h2>
         <div className="flex flex-wrap gap-3">
-          {["Next.js", "Cursor", "Vercel", "GitHub", "Supabase", "Anthropic", "Claude Code"].map((skill) => (
+          {["Next.js", "Tailwind CSS", "Cursor", "Vercel", "GitHub", "Supabase", "Anthropic", "Claude Code"].map((skill) => (
             <span key={skill} className="border border-gray-300 rounded-full px-4 py-1 text-sm text-gray-600">{skill}</span>
           ))}
         </div>
