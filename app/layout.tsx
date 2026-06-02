@@ -12,9 +12,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
-  title: "高橋英俊 | Web制作ポートフォリオ",
-  description: "AI×Web制作のポートフォリオサイト",
+export const metadata: Metadata = {
+  title: "とっちゃん | Web制作ポートフォリオ",
+  description: "ボート全国3位・新聞奨学生・土木工学科出身の異色Web制作者。Claude Code・Cursor・Vercelで爆速サイトを仕上げます。",
+  openGraph: {
+    title: "とっちゃん | Web制作ポートフォリオ",
+    description: "ボート全国3位・新聞奨学生・土木工学科出身の異色Web制作者。Claude Code・Cursor・Vercelで爆速サイトを仕上げます。",
+    url: "https://tocchan-web.com",
+    siteName: "とっちゃん | Web制作ポートフォリオ",
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "とっちゃん | Web制作ポートフォリオ",
+    description: "ボート全国3位・新聞奨学生・土木工学科出身の異色Web制作者。Claude Code・Cursor・Vercelで爆速サイトを仕上げます。",
+  },
 };
 
 export default function RootLayout({
