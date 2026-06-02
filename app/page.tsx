@@ -49,16 +49,37 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section className="max-w-2xl mx-auto px-6 py-24 text-center">
-        <h2 className="text-2xl font-bold mb-6">Contact</h2>
-        <p className="text-gray-500 mb-8">お仕事のご依頼・ご相談はランサーズからお気軽にどうぞ。</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+      <section className="max-w-2xl mx-auto px-6 py-24">
+        <h2 className="text-2xl font-bold mb-6 text-center">Contact</h2>
+        <p className="text-gray-500 mb-8 text-center">お仕事のご依頼・ご相談はお気軽にどうぞ。</p>
+        <form action="https://formspree.io/f/mbderjqb" method="POST" className="space-y-6">
+          <div>
+            <label htmlFor="name" className="block text-sm text-gray-600 mb-1">お名前</label>
+            <input type="text" id="name" name="name" required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-gray-900" />
+          </div>
+          <div>
+            <label htmlFor="email" className="block text-sm text-gray-600 mb-1">メールアドレス</label>
+            <input type="email" id="email" name="email" required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-gray-900" />
+          </div>
+          <div>
+            <label htmlFor="message" className="block text-sm text-gray-600 mb-1">ご相談内容</label>
+            <textarea id="message" name="message" rows={5} required
+              className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-gray-900" />
+          </div>
+          <button type="submit"
+            className="w-full bg-gray-900 text-white py-3 rounded-full hover:bg-gray-700 transition">
+            送信する
+          </button>
+        </form>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
           <a href="https://www.lancers.jp" target="_blank" rel="noopener noreferrer"
-            className="border border-gray-900 px-8 py-3 rounded-full hover:bg-gray-900 hover:text-white transition">
+            className="border border-gray-900 px-8 py-3 rounded-full hover:bg-gray-900 hover:text-white transition text-center">
             ランサーズで依頼する
           </a>
         </div>
-        <div className="border-t border-gray-100 pt-12">
+        <div className="border-t border-gray-100 pt-12 mt-12 text-center">
           <p className="text-sm text-gray-400 mb-2">BLOG</p>
           <h3 className="text-lg font-bold mb-3">息子と野球、そしてWeb制作</h3>
           <p className="text-gray-500 text-sm mb-6">少年野球コーチとしての日々や、AI×Web制作への挑戦をnoteで綴っています。</p>
