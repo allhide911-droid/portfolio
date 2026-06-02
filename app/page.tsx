@@ -24,7 +24,6 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-10">Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
-            { title: "Bloom Beauty", desc: "女性専用美容サロンサイト", url: "https://bloom-beauty-zeta.vercel.app" },
             { title: "田中税理士事務所", desc: "税理士事務所コーポレートサイト", url: "https://zeirishi-two.vercel.app" },
             { title: "炎牛", desc: "焼肉店のコーポレートサイト", url: "https://yakiniku-five.vercel.app" },
             { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "https://shogi-tawny.vercel.app" },
