@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
@@ -24,15 +26,25 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-10">Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
-            { title: "田中税理士事務所", desc: "税理士事務所コーポレートサイト", url: "/works/zeirishi" },
-            { title: "炎牛", desc: "焼肉店のコーポレートサイト", url: "/works/yakiniku" },
-            { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "/works/shogi" },
-            { title: "地域の少年野球チーム", desc: "少年野球チームの選手募集サイト", url: "/works/mets" },
+            { title: "田中税理士事務所", desc: "税理士事務所コーポレートサイト", url: "/works/zeirishi", img: "/images/works/zeirishi.png" },
+            { title: "炎牛", desc: "焼肉店のコーポレートサイト", url: "/works/yakiniku", img: "/images/works/yakiniku.png" },
+            { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "/works/shogi", img: "/images/works/shogi.png" },
+            { title: "地域の少年野球チーム", desc: "少年野球チームの選手募集サイト", url: "/works/mets", img: "/images/works/mets.png" },
           ].map((work) => (
             <a key={work.title} href={work.url}
-              className="border border-gray-200 rounded-2xl p-6 hover:shadow-md transition">
-              <h3 className="font-bold text-lg mb-2">{work.title}</h3>
-              <p className="text-gray-500 text-sm">{work.desc}</p>
+              className="border border-gray-200 rounded-2xl overflow-hidden hover:shadow-md transition">
+              <div className="w-full h-48 relative bg-gray-100">
+                <Image
+                  src={work.img}
+                  alt={work.title}
+                  fill
+                  className="object-cover object-top"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="font-bold text-lg mb-2">{work.title}</h3>
+                <p className="text-gray-500 text-sm">{work.desc}</p>
+              </div>
             </a>
           ))}
         </div>
@@ -77,6 +89,10 @@ export default function Home() {
           <a href="https://www.lancers.jp" target="_blank" rel="noopener noreferrer"
             className="border border-gray-900 px-8 py-3 rounded-full hover:bg-gray-900 hover:text-white transition text-center">
             ランサーズで依頼する
+          </a>
+          <a href="https://lin.ee/noUNHMWS" target="_blank" rel="noopener noreferrer"
+            className="bg-[#06C755] text-white px-8 py-3 rounded-full hover:bg-[#05a847] transition text-center">
+            LINEで相談する
           </a>
         </div>
         <div className="border-t border-gray-100 pt-12 mt-12 text-center">
