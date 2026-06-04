@@ -26,6 +26,7 @@ export default function Home() {
         <h2 className="text-2xl font-bold mb-10">Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
+            { title: "Bloom Beauty", desc: "女性専用美容サロンのコーポレートサイト", url: "/works/bloom", img: "/images/works/bloom.png" },
             { title: "田中税理士事務所", desc: "税理士事務所コーポレートサイト", url: "/works/zeirishi", img: "/images/works/zeirishi.png" },
             { title: "炎牛", desc: "焼肉店のコーポレートサイト", url: "/works/yakiniku", img: "/images/works/yakiniku.png" },
             { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "/works/shogi", img: "/images/works/shogi.png" },
