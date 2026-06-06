@@ -5,20 +5,41 @@ export default function Home() {
     <main className="min-h-screen bg-white text-gray-900">
 
       {/* Hero */}
-      <section className="flex flex-col items-center justify-center min-h-screen text-center px-6">
-        <p className="text-sm tracking-widest text-gray-400 mb-4">WEB CREATOR</p>
-        <h1 className="text-4xl md:text-6xl font-bold mb-6">AIで作る、本物のWeb</h1>
-        <p className="text-lg text-gray-500 mb-8">とっちゃん｜AI×Web制作フリーランス</p>
-        <a href="#works" className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition">実績を見る</a>
+      <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-bg.png"
+            alt="hero background"
+            fill
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-black/50" />
+        </div>
+        <div className="relative z-10 text-white">
+          <p className="text-sm tracking-widest text-gray-300 mb-4">WEB CREATOR</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">AIで作る、本物のWeb</h1>
+          <p className="text-lg text-gray-300 mb-8">とっちゃん｜AI×Web制作フリーランス</p>
+          <a href="#works" className="bg-white text-gray-900 px-8 py-3 rounded-full hover:bg-gray-200 transition">実績を見る</a>
+        </div>
       </section>
 
       {/* About */}
       <section className="max-w-2xl mx-auto px-6 py-24">
-        <h2 className="text-2xl font-bold mb-6">About</h2>
-        <p className="text-gray-600 leading-relaxed">
-          ボート全国3位・新聞奨学生・土木工学科出身の少年野球コーチ。<br />
-          異色すぎる経歴を持つWeb制作者が、Claude Code・Cursor・Vercelで爆速サイトを仕上げます。
-        </p>
+        <h2 className="text-2xl font-bold mb-8">About</h2>
+        <div className="flex flex-col sm:flex-row items-center gap-8">
+          <div className="w-32 h-32 relative rounded-full overflow-hidden flex-shrink-0">
+            <Image
+              src="/images/avatar.png"
+              alt="とっちゃん"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <p className="text-gray-600 leading-relaxed">
+            ボート全国3位・新聞奨学生・土木工学科出身の少年野球コーチ。<br />
+            異色すぎる経歴を持つWeb制作者が、Claude Code・Cursor・Vercelで爆速サイトを仕上げます。
+          </p>
+        </div>
       </section>
 
       {/* Works */}
