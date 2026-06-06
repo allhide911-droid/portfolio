@@ -31,7 +31,7 @@ export default function Shogi() {
         </div>
 
         <div className="mt-12">
-          <a href="https://shogi-theta.vercel.app" target="_blank" rel="noopener noreferrer"
+          <a href="https://shogi-tawny.vercel.app" target="_blank" rel="noopener noreferrer"
             className="inline-block bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-700 transition">
             サイトを見る →
           </a>
