@@ -27,13 +27,17 @@ export default function Home() {
       <section className="max-w-2xl mx-auto px-6 py-24">
         <h2 className="text-2xl font-bold mb-8">About</h2>
         <div className="flex flex-col sm:flex-row items-center gap-8">
-          <div className="w-32 h-32 relative rounded-full overflow-hidden flex-shrink-0">
-            <Image
-              src="/images/avatar.png"
-              alt="とっちゃん"
-              fill
-              className="object-cover"
-            />
+          <div className="flex flex-col items-center gap-2 flex-shrink-0">
+            <div className="w-32 h-32 relative rounded-full overflow-hidden">
+              <Image
+                src="/images/avatar.png"
+                alt="とっちゃん"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <p className="font-bold text-gray-900 text-sm">とっちゃん</p>
+            <p className="text-xs text-gray-400">AI×Web制作フリーランス</p>
           </div>
           <p className="text-gray-600 leading-relaxed">
             ボート全国3位・新聞奨学生・土木工学科出身の少年野球コーチ。<br />
@@ -108,7 +112,7 @@ export default function Home() {
           </button>
         </form>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <a href="https://www.lancers.jp" target="_blank" rel="noopener noreferrer"
+          <a href="https://www.lancers.jp/profile/tocchan_web" target="_blank" rel="noopener noreferrer"
             className="border border-gray-900 px-8 py-3 rounded-full hover:bg-gray-900 hover:text-white transition text-center">
             ランサーズで依頼する
           </a>
