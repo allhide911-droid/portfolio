@@ -112,9 +112,9 @@ export default function Home() {
           </button>
         </form>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
-          <a href="https://www.lancers.jp/profile/tocchan_web" target="_blank" rel="noopener noreferrer"
-            className="border border-gray-900 px-8 py-3 rounded-full hover:bg-gray-900 hover:text-white transition text-center">
-            ランサーズで依頼する
+          <a href="https://www.lancers.jp/menu/detail/1329959" target="_blank" rel="noopener noreferrer"
+            className="bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-700 transition text-center">
+            ランサーズでご依頼する
           </a>
           <a href="https://lin.ee/noUNHMWS" target="_blank" rel="noopener noreferrer"
             className="bg-[#06C755] text-white px-8 py-3 rounded-full hover:bg-[#05a847] transition text-center">
