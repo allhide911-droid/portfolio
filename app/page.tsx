@@ -1,18 +1,43 @@
+"use client";
 import Image from "next/image";
+import { useState } from "react";
 
 export default function Home() {
+  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("sending");
+    const form = e.currentTarget;
+    const data = {
+      name: (form.elements.namedItem("name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+    };
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        setStatus("done");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <main className="min-h-screen bg-white text-gray-900">
 
       {/* Hero */}
       <section className="relative flex flex-col items-center justify-center min-h-screen text-center px-6">
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-bg.png"
-            alt="hero background"
-            fill
-            className="object-cover"
-          />
+          <Image src="/images/hero-bg.png" alt="hero background" fill className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 text-white">
@@ -29,12 +54,7 @@ export default function Home() {
         <div className="flex flex-col sm:flex-row items-center gap-8">
           <div className="flex flex-col items-center gap-2 flex-shrink-0">
             <div className="w-32 h-32 relative rounded-full overflow-hidden">
-              <Image
-                src="/images/avatar.png"
-                alt="とっちゃん"
-                fill
-                className="object-cover"
-              />
+              <Image src="/images/avatar.png" alt="とっちゃん" fill className="object-cover" />
             </div>
             <p className="font-bold text-gray-900 text-sm">とっちゃん</p>
             <p className="text-xs text-gray-400">AI×Web制作フリーランス</p>
@@ -57,15 +77,9 @@ export default function Home() {
             { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "/works/shogi", img: "/images/works/shogi.png" },
             { title: "地域の少年野球チーム", desc: "少年野球チームの選手募集サイト", url: "/works/mets", img: "/images/works/mets.png" },
           ].map((work) => (
-            <a key={work.title} href={work.url}
-              className="border border-gray-200 rounded-2xl overflow-hidden hover:shadow-md transition">
+            <a key={work.title} href={work.url} className="border border-gray-200 rounded-2xl overflow-hidden hover:shadow-md transition">
               <div className="w-full h-48 relative bg-gray-100">
-                <Image
-                  src={work.img}
-                  alt={work.title}
-                  fill
-                  className="object-cover object-top"
-                />
+                <Image src={work.img} alt={work.title} fill className="object-cover object-top" />
               </div>
               <div className="p-6">
                 <h3 className="font-bold text-lg mb-2">{work.title}</h3>
@@ -90,7 +104,7 @@ export default function Home() {
       <section className="max-w-2xl mx-auto px-6 py-24">
         <h2 className="text-2xl font-bold mb-6 text-center">Contact</h2>
         <p className="text-gray-500 mb-8 text-center">お仕事のご依頼・ご相談はお気軽にどうぞ。</p>
-        <form action="https://formspree.io/f/mbderjqb" method="POST" className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm text-gray-600 mb-1">お名前</label>
             <input type="text" id="name" name="name" required
@@ -106,9 +120,15 @@ export default function Home() {
             <textarea id="message" name="message" rows={5} required
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-gray-900" />
           </div>
-          <button type="submit"
-            className="w-full bg-gray-900 text-white py-3 rounded-full hover:bg-gray-700 transition">
-            送信する
+          {status === "done" && (
+            <p className="text-green-600 text-center font-medium">お問い合わせを承りました。2〜3営業日以内にご返信いたします。</p>
+          )}
+          {status === "error" && (
+            <p className="text-red-500 text-center">送信に失敗しました。時間をおいて再度お試しください。</p>
+          )}
+          <button type="submit" disabled={status === "sending"}
+            className="w-full bg-gray-900 text-white py-3 rounded-full hover:bg-gray-700 transition disabled:opacity-50">
+            {status === "sending" ? "送信中..." : "送信する"}
           </button>
         </form>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12">
