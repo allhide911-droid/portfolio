@@ -1,9 +1,11 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
+  const router = useRouter();
+  const [status, setStatus] = useState<"idle" | "sending" | "error">("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -21,8 +23,7 @@ export default function Home() {
         body: JSON.stringify(data),
       });
       if (res.ok) {
-        setStatus("done");
-        form.reset();
+        router.push("/thanks");
       } else {
         setStatus("error");
       }
@@ -120,9 +121,6 @@ export default function Home() {
             <textarea id="message" name="message" rows={5} required
               className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:border-gray-900" />
           </div>
-          {status === "done" && (
-            <p className="text-green-600 text-center font-medium">お問い合わせを承りました。2〜3営業日以内にご返信いたします。</p>
-          )}
           {status === "error" && (
             <p className="text-red-500 text-center">送信に失敗しました。時間をおいて再度お試しください。</p>
           )}
