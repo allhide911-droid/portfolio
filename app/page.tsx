@@ -73,7 +73,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {[
             { title: "Bloom Beauty", desc: "女性専用美容サロンのコーポレートサイト", url: "/works/bloom", img: "/images/works/bloom.png" },
-            { title: "田中税理士事務所", desc: "税理士事務所コーポレートサイト", url: "/works/zeirishi", img: "/images/zeirishi-thumbnail-16x9.jpg" },
+            { title: "田中税理士事務所", desc: "税理士事務所コーポレートサイト", url: "/works/zeirishi", img: "/images/works/zeirishi-thumbnail-16x9.jpg" },
             { title: "炎牛", desc: "焼肉店のコーポレートサイト", url: "/works/yakiniku", img: "/images/works/yakiniku.png" },
             { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "/works/shogi", img: "/images/works/shogi.png" },
             { title: "地域の少年野球チーム", desc: "少年野球チームの選手募集サイト", url: "/works/mets", img: "/images/works/mets.png" },
