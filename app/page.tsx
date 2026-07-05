@@ -77,6 +77,7 @@ export default function Home() {
             { title: "炎牛", desc: "焼肉店のコーポレートサイト", url: "/works/yakiniku", img: "/images/works/yakiniku.png" },
             { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "/works/shogi", img: "/images/works/shogi.png" },
             { title: "地域の少年野球チーム", desc: "少年野球チームの選手募集サイト", url: "/works/mets", img: "/images/works/mets.png" },
+            { title: "ANVIL BASEBALL ACADEMY", desc: "少年野球教室の入会促進サイト", url: "/works/anvil", img: "/images/works/anvil.jpg" },
           ].map((work) => (
             <a key={work.title} href={work.url} className="border border-gray-200 rounded-2xl overflow-hidden hover:shadow-md transition">
               <div className="w-full h-48 relative bg-gray-100">
