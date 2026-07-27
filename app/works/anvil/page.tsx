@@ -10,7 +10,7 @@ export default function Anvil() {
         <div className="space-y-10">
           <div>
             <h2 className="text-xs tracking-widest text-gray-400 mb-2">PURPOSE</h2>
-            <p className="text-gray-700 leading-relaxed">少年野球教室の入会促進を目的とした、保護者・子ども双方に響くブランドサイトの制作。あわせて、実案件（将棋教室）のリハーサルとして、WordPress×Next.jsのヘッドレスCMS構成を検証。</p>
+            <p className="text-gray-700 leading-relaxed">少年野球教室の入会促進を目的とした、保護者・子ども双方に響くブランドサイトの制作。あわせて、個人教室・小規模事業者向けのWeb制作力を高める目的で、WordPress×Next.jsのヘッドレスCMS構成を検証。</p>
           </div>
           <div>
             <h2 className="text-xs tracking-widest text-gray-400 mb-2">TARGET</h2>

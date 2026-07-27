@@ -26,7 +26,7 @@ export default function Mets() {
           </div>
           <div>
             <h2 className="text-xs tracking-widest text-gray-400 mb-2">POINT</h2>
-            <p className="text-gray-700 leading-relaxed">コーチ自身が現役で関わるチームのサイトだからこそ、保護者目線で「安心感」を最優先に設計。体験申込みフォームをトップに配置し、スマホでも迷わず操作できる導線にこだわった。申込みデータはSupabaseで管理し、コーチ陣がリアルタイムで確認できる運用フローも構築した。</p>
+            <p className="text-gray-700 leading-relaxed">コーチ自身が現役で関わるチームのサイトだからこそ、保護者目線で「安心感」を最優先に設計。体験申込みフォームをトップに配置し、スマホでも迷わず操作できる導線にこだわった。申込みデータはSupabaseで管理し、コーチ陣がリアルタイムで確認できる運用フローも構築した。WordPress版での実装も検討・提案可能。</p>
           </div>
         </div>
 

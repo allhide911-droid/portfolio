@@ -77,7 +77,7 @@ export default function Home() {
             { title: "炎牛", desc: "焼肉店のコーポレートサイト", url: "/works/yakiniku", img: "/images/works/yakiniku.png" },
             { title: "王手将棋教室", desc: "将棋教室の集客サイト", url: "/works/shogi", img: "/images/works/shogi.png" },
             { title: "地域の少年野球チーム", desc: "少年野球チームの選手募集サイト", url: "/works/mets", img: "/images/works/mets.png" },
-            { title: "ANVIL BASEBALL ACADEMY", desc: "少年野球教室の入会促進サイト", url: "/works/anvil", img: "/images/works/anvil.jpg" },
+            { title: "ANVIL BASEBALL ACADEMY", desc: "少年野球教室の入会促進サイト（WordPress REST API連携・ヘッドレスCMS構成）", url: "/works/anvil", img: "/images/works/anvil.jpg" },
           ].map((work) => (
             <a key={work.title} href={work.url} className="border border-gray-200 rounded-2xl overflow-hidden hover:shadow-md transition">
               <div className="w-full h-48 relative bg-gray-100">
@@ -96,7 +96,7 @@ export default function Home() {
       <section className="max-w-2xl mx-auto px-6 py-24">
         <h2 className="text-2xl font-bold mb-6">Skills</h2>
         <div className="flex flex-wrap gap-3">
-          {["Next.js", "Tailwind CSS", "Cursor", "Vercel", "GitHub", "Supabase", "Anthropic", "Claude Code"].map((skill) => (
+          {["Next.js", "Tailwind CSS", "WordPress", "Cursor", "Vercel", "GitHub", "Supabase", "Claude API", "Claude Code"].map((skill) => (
             <span key={skill} className="border border-gray-300 rounded-full px-4 py-1 text-sm text-gray-600">{skill}</span>
           ))}
         </div>
@@ -134,6 +134,10 @@ export default function Home() {
           <a href="https://www.lancers.jp/menu/detail/1329959" target="_blank" rel="noopener noreferrer"
             className="bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-700 transition text-center">
             ランサーズでご依頼する
+          </a>
+          <a href="https://coconala.com/users/6035654" target="_blank" rel="noopener noreferrer"
+            className="bg-[#FF6633] text-white px-8 py-3 rounded-full hover:bg-[#e8551f] transition text-center">
+            ココナラでご依頼する
           </a>
           <a href="https://lin.ee/noUNHMWS" target="_blank" rel="noopener noreferrer"
             className="bg-[#06C755] text-white px-8 py-3 rounded-full hover:bg-[#05a847] transition text-center">

@@ -5,7 +5,7 @@ export default function Shogi() {
         <a href="/#works" className="text-sm text-gray-400 hover:text-gray-600 transition">← 実績一覧に戻る</a>
         <h1 className="text-3xl font-bold mt-8 mb-2">王手将棋教室</h1>
         <p className="text-gray-500 mb-2">将棋教室の集客サイト</p>
-        <p className="text-xs text-gray-400 mb-12">※課題設定・設計・実装すべて自主制作のポートフォリオ作品です</p>
+        <p className="text-xs text-gray-400 mb-12">※将棋教室というジャンルを理解するために事前に自主制作したデモです</p>
 
         <div className="space-y-10">
           <div>
@@ -26,7 +26,7 @@ export default function Shogi() {
           </div>
           <div>
             <h2 className="text-xs tracking-widest text-gray-400 mb-2">POINT</h2>
-            <p className="text-gray-700 leading-relaxed">将棋の「伝統・格式」と「親しみやすさ」を両立するデザインとして、深みのある紺×ゴールドを採用。「難しそう」というイメージを払拭するため、クラス分けを明確に示し「自分のレベルでも通える」と感じてもらえる構成にこだわった。</p>
+            <p className="text-gray-700 leading-relaxed">将棋の「伝統・格式」と「親しみやすさ」を両立するデザインとして、深みのある紺×ゴールドを採用。「難しそう」というイメージを払拭するため、クラス分けを明確に示し「自分のレベルでも通える」と感じてもらえる構成にこだわった。WordPress版での実装も検討・提案可能。</p>
           </div>
         </div>
 

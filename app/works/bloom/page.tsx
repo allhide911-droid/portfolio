@@ -26,7 +26,7 @@ export default function BloomBeauty() {
           </div>
           <div>
             <h2 className="text-xs tracking-widest text-gray-400 mb-2">POINT</h2>
-            <p className="text-gray-700 leading-relaxed">ターゲットである女性層に刺さるよう、ピンク系グラデーションを全体のトーンに統一。「かわいい」だけでなく「信頼できる」印象を与えるため、料金表を明瞭に掲載しアクセスにGoogleマップを埋め込むことで来店ハードルを下げた。</p>
+            <p className="text-gray-700 leading-relaxed">ターゲットである女性層に刺さるよう、ピンク系グラデーションを全体のトーンに統一。「かわいい」だけでなく「信頼できる」印象を与えるため、料金表を明瞭に掲載しアクセスにGoogleマップを埋め込むことで来店ハードルを下げた。WordPress版での実装も検討・提案可能。</p>
           </div>
         </div>
 

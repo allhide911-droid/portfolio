@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "とっちゃん | Web制作ポートフォリオ",
-  description: "ボート全国3位・新聞奨学生・土木工学科出身の異色Web制作者。Claude Code・Cursor・Vercelで爆速サイトを仕上げます。",
+  description: "個人事業主・小規模教室向けWeb制作。WordPress・Next.jsでの集客サイト構築、予約・スケジュール管理の実装まで対応。法人営業7年の経験を活かし、伝わる提案から丁寧に伴走します。",
   openGraph: {
     title: "とっちゃん | Web制作ポートフォリオ",
-    description: "ボート全国3位・新聞奨学生・土木工学科出身の異色Web制作者。Claude Code・Cursor・Vercelで爆速サイトを仕上げます。",
+    description: "個人事業主・小規模教室向けWeb制作。WordPress・Next.jsでの集客サイト構築、予約・スケジュール管理の実装まで対応。法人営業7年の経験を活かし、伝わる提案から丁寧に伴走します。",
     url: "https://tocchan-web.com",
     siteName: "とっちゃん | Web制作ポートフォリオ",
     locale: "ja_JP",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "とっちゃん | Web制作ポートフォリオ",
-    description: "ボート全国3位・新聞奨学生・土木工学科出身の異色Web制作者。Claude Code・Cursor・Vercelで爆速サイトを仕上げます。",
+    description: "個人事業主・小規模教室向けWeb制作。WordPress・Next.jsでの集客サイト構築、予約・スケジュール管理の実装まで対応。法人営業7年の経験を活かし、伝わる提案から丁寧に伴走します。",
   },
 };
 
