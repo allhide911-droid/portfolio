@@ -26,7 +26,7 @@ export default function Zeirishi() {
           </div>
           <div>
             <h2 className="text-xs tracking-widest text-gray-400 mb-2">POINT</h2>
-            <p className="text-gray-700 leading-relaxed">士業サイトでよく使われる紺・グレーをあえて避け、温かみのあるオフホワイト×ネイビーを選択。初回相談のハードルを下げることを意識し、専門用語を避けたわかりやすいコピーと清潔感のある配色で士業特有の堅さを和らげた。WordPress版での実装も検討・提案可能。</p>
+            <p className="text-gray-700 leading-relaxed">士業サイトにありがちな「紺一色で堅い」印象を避けるため、ネイビーを基調としながらも、温かみのあるオフホワイトを組み合わせて余白を広く取り、写真を大きく見せることで堅苦しさを和らげた。専門性・信頼感はネイビーで担保しつつ、初回相談のハードルを下げることを意識し、専門用語を避けたわかりやすいコピーを採用。WordPress版での実装も検討・提案可能。</p>
           </div>
         </div>
 
